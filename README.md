@@ -48,7 +48,18 @@ Account change — это Backend-часть программы электрон
     ```
     python manage.py csu
     ```
-   
+8. Для запуска проекта сначала запустите "Redis" командой 
+    ```
+    redis-server
+    ```
+    и "Celery" командой 
+    ```
+    celery -A config worker --loglevel=info
+    ```
+    после чего запустите проект командой 
+    ```
+    python manage.py runserver 
+    ```
 ## Проект подготовлен для упаковки в Docker
 
 Для упаковки и пользования проектом в Docker внесите изменения в настройки файла ".env", после чего введите команду:
